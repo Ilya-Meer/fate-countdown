@@ -1,0 +1,71 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #151426;
+}
+
+.inner {
+  color: #bc04bf;
+  display: flex;
+  font-size: 48px;
+  font-family: "Finlandica", sans-serif;
+  opacity: 0;
+  animation: fade-in;
+  animation-duration: 0.2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.inner span {
+  margin: 0 20px;
+  text-align: center;
+}
+
+.inner span div:first-of-type {
+  position: relative;
+}
+
+.inner span div:nth-of-type(2) {
+  font-size: 16px;
+}
+
+.inner span div:first-of-type::after {
+  position: absolute;
+  content: ":";
+  right: -25px;
+}
+
+.inner span:last-of-type div:first-of-type::after {
+  display: none;
+}
+
+@media all and (max-width: 480px) {
+  .inner {
+    flex-direction: column;
+  }
+  .inner span {
+    margin: 20px 0;
+  }
+
+  .inner span div:first-of-type::after {
+    display: none;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
