@@ -1,4 +1,4 @@
-const nextSessionDate = new Date(2022, 6, 27, 19);
+const nextSessionDate = new Date(2022, 7, 10, 19);
 
 const countdownOverMessage = "The next session has started!";
 
